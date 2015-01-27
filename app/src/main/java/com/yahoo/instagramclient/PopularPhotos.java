@@ -3,8 +3,10 @@ package com.yahoo.instagramclient;
 import android.app.ActionBar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
-import android.support.v7.app.ActionBarActivity;
+
 import android.os.Bundle;
+
+import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,7 +15,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class PopularPhotos extends ActionBarActivity {
+public class PopularPhotos extends Activity {
 
     private SwipeRefreshLayout swipeContainer;
 
@@ -21,7 +23,7 @@ public class PopularPhotos extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_popular_photos);
-        getSupportActionBar().setIcon(R.drawable.ic_launcher);
+        getActionBar().setTitle(R.string.popular_photos_caption);
 
         swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
         // Setup refresh listener which triggers new data loading

@@ -1,6 +1,7 @@
 package com.yahoo.instagramclient;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Movie;
 import android.view.LayoutInflater;
@@ -22,6 +23,7 @@ import java.util.ArrayList;
  * Created by sraovasu on 1/25/15.
  */
 public class InstagramPhotosAdapter extends ArrayAdapter<InstagramPhoto> {
+
     public InstagramPhotosAdapter(Context context, ArrayList<InstagramPhoto> photos) {
         super(context, R.layout.item_photo, photos);
     }
